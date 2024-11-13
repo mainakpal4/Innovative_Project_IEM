@@ -1,0 +1,176 @@
+/* Basic Styling */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f8ff;
+    color: #333;
+    text-align: center;
+    font-size: 1.7rem; 
+  }
+  
+  header {
+    padding: 2.5em;
+    background: linear-gradient(to right, #007ACC, #00c6ff);
+    color: white;
+  }
+  
+  /* Brand Animation */
+  .brand {
+    font-size: 3.5rem;
+    animation: fadeIn 1.2s ease-in-out infinite alternate;
+  }
+  
+  @keyframes fadeIn {
+    from { opacity: 0.3; }
+    to { opacity: 1; }
+  }
+  
+  /* Navigation */
+  nav ul {
+    display: flex;
+    justify-content: space-evenly;
+    background-color: #007ACC;
+    padding: 10px;
+    list-style: none;
+    margin: 10;
+  }
+  
+  nav ul li {
+    margin: 0 105px;
+  }
+  
+  nav ul li a {
+    color: white;
+    text-decoration: none;
+  }
+  
+  nav ul li a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Sections */
+  section {
+    margin: 20px;
+  }
+  
+  #future input {
+    padding: 15px;
+    margin: 10px 0;
+  }
+  
+  #future button {
+    padding: 15px 10px;
+    background-color: #007ACC;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  
+  #future button:hover {
+    background-color: #005A9E;
+  }
+  
+  /* Team Section Styling */
+
+#team {
+    margin-top: 20px;
+  }
+  
+  .team-members {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .team-member {
+    width: 200px;
+    text-align: center;
+  }
+  
+ /* Style for team member images in the About section */
+.team-member img {
+  width: 150px; /* Set the desired width */
+  height: 150px; /* Set the desired height */
+  object-fit: cover; /* Crops the image to fill the dimensions while maintaining aspect ratio */
+  border-radius: 50%; /* Optional: makes the image circular */
+  border: 2px solid #007ACC; /* Optional: adds a border */
+  transition: transform 0.46s ease-in-out; /* Smooth transition for hover effect */
+}
+
+/* Hover animation for pop-up and rotation */
+.team-member img:hover {
+  transform: scale(1.5) rotateY(360deg); /* Scales up the image and rotates it */
+}
+
+
+  
+  .team-member h3 {
+    font-size: 1.2rem;
+    margin: 10px 0 5px;
+  }
+  
+  .team-member p {
+    font-size: 0.9rem;
+    color: #666;
+  }
+  /* Home Section Animation */
+#home h2, #home p {
+    animation: fadeIn 1.5s ease-in-out;
+  }
+  
+  /* About Section Animation */
+  #about h2, #about p {
+    animation: slideIn 1.5s ease-in-out;
+  }
+/* Keyframes for animations */
+
+/* Fade-in effect */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  
+  /* Slide-in from bottom */
+  @keyframes slideIn {
+    from { transform: translateY(20px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+  }
+  #map {
+    width: 100%;
+    height: 400px;
+    margin: 20px 0;
+  }
+/* Make increment and decrement buttons for number input bigger */
+input[type="number"] {
+  width: 100px;
+  padding: 10px;
+  font-size: 1.2rem;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  height: 30px; /* Height of the buttons */
+  width: 30px;  /* Width of the buttons */
+  background-color: #007ACC; /* Optional: change color for better visibility */
+  color: white; /* Optional: change text color */
+  border: none;
+}
+/* Gradient background for the Future section */
+#future {
+  background: linear-gradient(to bottom right, #76bceb, #15c8fa); /* Customize colors as needed */
+  padding: 20px;
+  color: #fff; /* Adjust text color for better visibility on the gradient */
+}
+/* Initial state for page transitions */
+body {
+  opacity: 1;
+  transition: opacity 0.3s ease-in-out; /* Duration should match the JavaScript delay */
+}
+
+/* Fade-out class for navigation transition */
+body.fade-out {
+  opacity: 0;
+}

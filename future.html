@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ClimateGPT - Future Prediction</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- Leaflet CSS for Map -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+</head>
+<body>
+  <header>
+    <h1 class="brand">ClimateGPT</h1>
+  </header>
+
+  <!-- Navigation Bar -->
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="future.html">Future</a></li>
+    </ul>
+  </nav>
+
+  <!-- Future Prediction Section -->
+  <section id="future">
+    <h2>Climate Prediction</h2>
+
+    <!-- Input for Years -->
+    <label for="years">Enter the number of years (1-10):</label>
+    <input type="number" id="years" min="1" max="10" placeholder="e.g., 5">
+    <br><br>
+
+    <!-- Input for Months -->
+    <label for="months">Enter the number of months (1-12):</label>
+    <input type="number" id="months" min="1" max="12" placeholder="e.g., 3">
+    <br><br>
+
+    <!-- Location Input -->
+    <label for="location">Enter a location:</label>
+    <input type="text" id="location" placeholder="Enter location (e.g., Kolkata)">
+    <br><br>
+
+    <!-- Map Container for Location Selection -->
+    <div id="map" style="width: 100%; height: 400px;"></div>
+
+    <!-- Prediction Button -->
+    <button onclick="predictClimate()">Get Prediction</button>
+    <p id="prediction-result"></p>
+  </section>
+
+  <!-- Leaflet JS for Map -->
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
